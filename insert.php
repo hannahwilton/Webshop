@@ -4,12 +4,12 @@ require "settings/init.php";
 if (!empty($_POST["data"])){
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris) values(:prodNavn, :prodBeskrivelse, :prodPris)";
-    $bind = [":prodNavn" => $data["prodNavn"], ":prodBeskrivelse" => $data["prodBeskrivelse"], ":prodPris" => $data["prodPris"]];
+    $sql = "INSERT INTO produkter (prodTitel, prodAuthor, prodGenre, prodPublisher, prodLanguage, prodPublishDate, prodFormat, prodPages, prodPrice, prodDescription) values(:prodTitel, :prodAuthor, :prodGenre, :prodPublisher, :prodLanguage, :prodPublishDate, :prodFormat, :prodPages, :prodPrice, :prodDescription)";
+    $bind = [":prodTitel" => $data["prodTitel"], ":prodAuthor" => $data["prodAuthor"], ":prodGenre" => $data["prodGenre"], ":prodPublisher" => $data["prodPublisher"], ":prodLanguage" => $data["prodLanguage"], ":prodPublishDate" => $data["prodPublishDate"], ":prodFormat" => $data["prodFormat"], ":prodPages" => $data["prodPages"], ":prodPrice" => $data["prodPrice"], ":prodDescription" => $data["prodDescription"]];
 
     $db->sql($sql, $bind, false);
 
-    echo "produktet er nu indsat. <a href='insert.php'>Indsæt et produkt mere</a>";
+    echo "Produktet er nu indsat. <a href='insert.php'>Indsæt et produkt mere</a>";
     exit();
 }
 ?>
