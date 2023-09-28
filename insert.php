@@ -27,6 +27,9 @@ if (!empty($_POST["data"])){
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tiny.cloud/1/ovjm1zsqixh11hefby1viqpa0fa0y5g4rx4xzs1vfj4we7tq/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
@@ -36,8 +39,14 @@ if (!empty($_POST["data"])){
 
 <body>
 
+
+
 <form method="post" action="insert.php">
     <div class="row">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
+            <h1>Indsæt ny bog</h1>
+        </div>
+
         <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
                 <label class="py-1" for="prodTitel">Titel på bog:</label>
