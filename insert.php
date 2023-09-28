@@ -38,81 +38,81 @@ if (!empty($_POST["data"])){
 
 <form method="post" action="insert.php">
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodTitel">Titel på bog</label>
-                <input class="form-control" type="text" name="data[prodTitel]" id="prodTitel" placeholder="Titel på bog" value="">
+                <label class="py-1" for="prodTitel">Titel på bog:</label>
+                <input class="form-control" type="text" name="data[prodTitel]" id="prodTitel" placeholder="Titel" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodAuthor">Forfatter</label>
+                <label class="py-1" for="prodAuthor">Forfatter:</label>
                 <input class="form-control" type="text" name="data[prodAuthor]" id="prodAuthor" placeholder="Forfatter" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodGenre">Genre</label>
+                <label class="py-1" for="prodGenre">Genre:</label>
                 <input class="form-control" type="text" name="data[prodGenre]" id="prodGenre" placeholder="Genre" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodPublisher">Forlag</label>
+                <label class="py-1" for="prodPublisher">Forlag:</label>
                 <input class="form-control" type="text" name="data[prodPublisher]" id="prodPublisher" placeholder="Forlag" value="">
             </div>
         </div>
 
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodLanguage">Sprog</label>
+                <label class="py-1" for="prodLanguage">Sprog:</label>
                 <input class="form-control" type="text" name="data[prodLanguage]" id="prodLanguage" placeholder="Sprog" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodPublishDate">Udgivelsesdato</label>
+                <label class="py-1" for="prodPublishDate">Udgivelsesdato:</label>
                 <input class="form-control" type="date" name="data[prodPublishDate]" id="prodPublishDate" placeholder="Udgivelsesdato" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodFormat">Format</label>
+                <label class="py-1" for="prodFormat">Format:</label>
                 <input class="form-control" type="text" name="data[prodFormat]" id="prodFormat" placeholder="Format" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodPages">Antal sider</label>
+                <label class="py-1" for="prodPages">Antal sider:</label>
                 <input class="form-control" type="text" name="data[prodPages]" id="prodPages" placeholder="Sider" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodPrice">Pris</label>
+                <label class="py-1" for="prodPrice">Pris:</label>
                 <input class="form-control" type="number" step="0.01" name="data[prodPrice]" id="prodPrice" placeholder="Pris" value="">
             </div>
         </div>
 
 
-        <div class="col-12">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <div class="form-control">
-                <label for="prodDescription">Beskrivelse</label>
+                <label class="py-1" for="prodDescription">Beskrivelse:</label>
                 <textarea class="form-control" name="data[prodDescription]" id="prodDescription"></textarea>
 
             </div>
 
         </div>
 
-        <div class="col-12 col-md-6 offset-md-6">
+        <div class="col-12 col-md-6 offset-md-3 p-3">
             <button class="form-control btn btn-primary" type="submit" id="btnSubmit">Opret produkt</button>
 
         </div>
