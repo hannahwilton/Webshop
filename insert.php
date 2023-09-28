@@ -39,8 +39,6 @@ if (!empty($_POST["data"])){
 
 <body>
 
-
-
 <form method="post" action="insert.php">
     <div class="row">
         <div class="col-12 col-md-6 offset-md-3 p-3">
@@ -122,7 +120,7 @@ if (!empty($_POST["data"])){
         </div>
 
         <div class="col-12 col-md-6 offset-md-3 p-3">
-            <button class="form-control btn btn-primary" type="submit" id="btnSubmit">Opret produkt</button>
+            <button class="form-control btn" type="submit" id="btnSubmit">Opret produkt</button>
 
         </div>
     </div>
