@@ -1,3 +1,25 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$link-decoration: none;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+				"farve": $cyan-400,
+				"primary": #59554C,
+				"button": #798C8C,
+				"boxColor": #AEBFBE,
+
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrapComponents";
+
 * {
 	box-sizing: border-box;
 }
@@ -5,6 +27,7 @@
 body {
 	margin: 0;
 	font-family: 'Mooli', sans-serif;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,8 +57,13 @@ img {
 	height: auto;
 }
 
-.btn {
-	background-color: #D2D2C8;
+
+.btn-submit:hover{
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+
 }
+
+
 
 

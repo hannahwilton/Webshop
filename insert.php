@@ -27,6 +27,7 @@ if (!empty($_POST["data"])){
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
@@ -41,86 +42,89 @@ if (!empty($_POST["data"])){
 
 <form method="post" action="insert.php">
     <div class="row">
+
         <div class="col-12 col-md-6 offset-md-3 p-3">
-            <h1>Indsæt ny bog</h1>
+            <h2 class="text-primary">Indsæt ny bog</h2>
         </div>
 
         <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodTitel">Titel på bog:</label>
-                <input class="form-control" type="text" name="data[prodTitel]" id="prodTitel" placeholder="Titel" value="">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodTitel">Titel på bog:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodTitel]" id="prodTitel" placeholder="Titel" value="">
             </div>
         </div>
 
         <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodAuthor">Forfatter:</label>
-                <input class="form-control" type="text" name="data[prodAuthor]" id="prodAuthor" placeholder="Forfatter" value="">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodAuthor">Forfatter:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodAuthor]" id="prodAuthor" placeholder="Forfatter" value="">
             </div>
         </div>
 
         <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodGenre">Genre:</label>
-                <input class="form-control" type="text" name="data[prodGenre]" id="prodGenre" placeholder="Genre" value="">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodGenre">Genre:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodGenre]" id="prodGenre" placeholder="Genre" value="">
             </div>
         </div>
 
         <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodPublisher">Forlag:</label>
-                <input class="form-control" type="text" name="data[prodPublisher]" id="prodPublisher" placeholder="Forlag" value="">
-            </div>
-        </div>
-
-
-        <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodLanguage">Sprog:</label>
-                <input class="form-control" type="text" name="data[prodLanguage]" id="prodLanguage" placeholder="Sprog" value="">
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodPublishDate">Udgivelsesdato:</label>
-                <input class="form-control" type="date" name="data[prodPublishDate]" id="prodPublishDate" placeholder="Udgivelsesdato" value="">
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodFormat">Format:</label>
-                <input class="form-control" type="text" name="data[prodFormat]" id="prodFormat" placeholder="Format" value="">
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodPages">Antal sider:</label>
-                <input class="form-control" type="text" name="data[prodPages]" id="prodPages" placeholder="Sider" value="">
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodPrice">Pris:</label>
-                <input class="form-control" type="number" step="0.01" name="data[prodPrice]" id="prodPrice" placeholder="Pris" value="">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodPublisher">Forlag:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodPublisher]" id="prodPublisher" placeholder="Forlag" value="">
             </div>
         </div>
 
 
         <div class="col-12 col-md-6 offset-md-3 p-3">
-            <div class="form-control">
-                <label class="py-1" for="prodDescription">Beskrivelse:</label>
-                <textarea class="form-control" name="data[prodDescription]" id="prodDescription"></textarea>
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodLanguage">Sprog:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodLanguage]" id="prodLanguage" placeholder="Sprog" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 offset-md-3 p-3">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodPublishDate">Udgivelsesdato:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="date" name="data[prodPublishDate]" id="prodPublishDate" placeholder="Udgivelsesdato" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 offset-md-3 p-3">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodFormat">Format:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodFormat]" id="prodFormat" placeholder="Format" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 offset-md-3 p-3">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodPages">Antal sider:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodPages]" id="prodPages" placeholder="Sider" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 offset-md-3 p-3">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodPrice">Pris:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="number" step="0.01" name="data[prodPrice]" id="prodPrice" placeholder="Pris" value="">
+            </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 offset-md-3 p-3">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodDescription">Beskrivelse:</label>
+                <textarea class="form-control bg-boxColor border border-3 border-white" name="data[prodDescription]" id="prodDescription"></textarea>
 
             </div>
 
         </div>
 
         <div class="col-12 col-md-6 offset-md-3 p-3">
-            <button class="form-control btn" type="submit" id="btnSubmit">Opret produkt</button>
+            <button class="form-control btn btn-button btn-submit" type="submit" id="btnSubmit">
+                <strong class="text-white">Opret produkt</strong>
+            </button>
 
         </div>
     </div>
