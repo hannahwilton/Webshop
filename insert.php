@@ -10,7 +10,9 @@ if (!empty($_POST["data"])){
     $db->sql($sql, $bind, false);
 
     echo "Produktet er nu indsat. <a href='insert.php'>Indsæt et produkt mere</a>";
+    header("Location: result.php");
     exit();
+
 }
 ?>
 
@@ -39,36 +41,36 @@ if (!empty($_POST["data"])){
 </head>
 
 <body>
-
+<div class="container">
 <form method="post" action="insert.php">
     <div class="row">
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <h2 class="text-primary">Indsæt ny bog</h2>
         </div>
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodTitel">Titel på bog:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodTitel]" id="prodTitel" placeholder="Titel" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodAuthor">Forfatter:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodAuthor]" id="prodAuthor" placeholder="Forfatter" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodGenre">Genre:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodGenre]" id="prodGenre" placeholder="Genre" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodPublisher">Forlag:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodPublisher]" id="prodPublisher" placeholder="Forlag" value="">
@@ -76,35 +78,35 @@ if (!empty($_POST["data"])){
         </div>
 
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodLanguage">Sprog:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodLanguage]" id="prodLanguage" placeholder="Sprog" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodPublishDate">Udgivelsesdato:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="date" name="data[prodPublishDate]" id="prodPublishDate" placeholder="Udgivelsesdato" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodFormat">Format:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodFormat]" id="prodFormat" placeholder="Format" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodPages">Antal sider:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodPages]" id="prodPages" placeholder="Sider" value="">
             </div>
         </div>
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodPrice">Pris:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="number" step="0.01" name="data[prodPrice]" id="prodPrice" placeholder="Pris" value="">
@@ -112,7 +114,7 @@ if (!empty($_POST["data"])){
         </div>
 
 
-        <div class="col-12 col-md-6 offset-md-3 p-3">
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodDescription">Beskrivelse:</label>
                 <textarea class="form-control bg-boxColor border border-3 border-white" name="data[prodDescription]" id="prodDescription"></textarea>
@@ -129,7 +131,7 @@ if (!empty($_POST["data"])){
         </div>
     </div>
 </form>
-
+</div>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 

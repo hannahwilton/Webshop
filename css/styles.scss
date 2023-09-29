@@ -13,6 +13,7 @@ $custom-colors: (
 				"primary": #59554C,
 				"button": #798C8C,
 				"boxColor": #AEBFBE,
+				"link": #000000,
 
 );
 
@@ -63,6 +64,22 @@ img {
 	transition: transform 0.3s ease;
 
 }
+
+.messageContainer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.messageBox {
+	border-radius: 5px;
+}
+
+.outMessageBox{
+	border-radius: 5px;
+}
+
 
 
 
