@@ -1,7 +1,7 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM produkter WHERE prodId = 46");
+$produkter = $db->sql("SELECT * FROM produkter WHERE prodId = 2");
 
 ?>
 
@@ -29,9 +29,8 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId = 46");
 <body>
 
 <?php
-
-foreach ($produkter as $produkt){
-    ?>
+foreach ($produkter as $produkt)
+?>
 
     <div class="container">
         <div class="row m-2 pt-3">
@@ -69,25 +68,24 @@ foreach ($produkter as $produkt){
                         <p><?php echo $produkt->prodDescription; ?></p>
                     </div>
 
-                    <div class="col-12">
-
-                        <h5 class="py-3 pt-0">Forlag: <?php echo $produkt->prodPublisher . "<br>"; ?></h5>
+                    <div class="col-12 ">
+                        <h5 class="py-4">Forlag: <?php echo $produkt->prodPublisher . "<br>"; ?></h5>
                     </div>
 
                     <div class="col-12">
-                        <h5 class="py-3 pt-0">Udgivelsesdato: <?php echo $produkt->prodPublishDate . "<br>"; ?></h5>
+                        <h5 class="py-4 pt-0">Udgivelsesdato: <?php echo $produkt->prodPublishDate . "<br>"; ?></h5>
                     </div>
 
                     <div class="col-12">
-                        <h5 class="py-3 pt-0">Sprog:  <?php echo $produkt->prodLanguage . "<br>"; ?></h5>
+                        <h5 class="py-4 pt-0">Sprog:  <?php echo $produkt->prodLanguage . "<br>"; ?></h5>
                     </div>
 
                     <div class="col-12">
-                        <h5 class="py-3 pt-0"> <?php echo $produkt->prodFormat . "<br>"; ?></h5>
+                        <h5 class="py-4 pt-0"> <?php echo $produkt->prodFormat . "<br>"; ?></h5>
                     </div>
 
                     <div class="col-12">
-                        <h5 class="py-3 pt-0">Sideantal: <?php echo $produkt->prodPages . "<br>"; ?></h5>
+                        <h5 class="py-4 pt-0">Sideantal: <?php echo $produkt->prodPages . "<br>"; ?></h5>
                     </div>
                 </div>
             </div>
@@ -95,9 +93,6 @@ foreach ($produkter as $produkt){
     </div>
 
 </div>
-    <?php
-}
-?>
 
 
 

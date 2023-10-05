@@ -18,6 +18,12 @@ if (isset($data["password"]) && $data["password"] == "KickPHP"){
 
     }
 
+    if (!empty($data["priceSearch"])){
+        $sql .= " AND prodPrice = :prodPrice";
+        $bind[":prodPrice"] = $data["priceSearch"];
+
+    }
+
 
     $sql .= " ORDER BY prodTitel";
 
