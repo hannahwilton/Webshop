@@ -3,9 +3,16 @@ require "settings/init.php";
 
 if (!empty($_POST["data"])){
     $data = $_POST["data"];
+    $file = $_FILES;
 
-    $sql = "INSERT INTO produkter (prodTitel, prodAuthor, prodGenre, prodPublisher, prodLanguage, prodPublishDate, prodFormat, prodPages, prodPrice, prodDescription) values(:prodTitel, :prodAuthor, :prodGenre, :prodPublisher, :prodLanguage, :prodPublishDate, :prodFormat, :prodPages, :prodPrice, :prodDescription)";
-    $bind = [":prodTitel" => $data["prodTitel"], ":prodAuthor" => $data["prodAuthor"], ":prodGenre" => $data["prodGenre"], ":prodPublisher" => $data["prodPublisher"], ":prodLanguage" => $data["prodLanguage"], ":prodPublishDate" => $data["prodPublishDate"], ":prodFormat" => $data["prodFormat"], ":prodPages" => $data["prodPages"], ":prodPrice" => $data["prodPrice"], ":prodDescription" => $data["prodDescription"]];
+    if (!empty($file["prodBillede"]["tmp_name"])){
+        move_uploaded_file($file["prodBillede"]["tmp_name"], "uploads/" . basename($file["prodBillede"]["name"]));
+    }
+
+    $sql = "INSERT INTO produkter (prodTitel, prodAuthor, prodGenre, prodPublisher, prodLanguage, prodPublishDate, prodFormat, prodPages, prodPrice, prodDescription, prodBillede) values(:prodTitel, :prodAuthor, :prodGenre, :prodPublisher, :prodLanguage, :prodPublishDate, :prodFormat, :prodPages, :prodPrice, :prodDescription, :prodBillede)";
+    $bind = [":prodTitel" => $data["prodTitel"], ":prodAuthor" => $data["prodAuthor"], ":prodGenre" => $data["prodGenre"], ":prodPublisher" => $data["prodPublisher"], ":prodLanguage" => $data["prodLanguage"], ":prodPublishDate" => $data["prodPublishDate"], ":prodFormat" => $data["prodFormat"], ":prodPages" => $data["prodPages"], ":prodPrice" => $data["prodPrice"], ":prodDescription" => $data["prodDescription"],
+            ":prodBillede" => (!empty($file["prodBillede"]["tmp_name"])) ? $file["prodBillede"]["name"] : null,
+    ];
 
     $db->sql($sql, $bind, false);
 
@@ -42,7 +49,7 @@ if (!empty($_POST["data"])){
 
 <body>
 <div class="container">
-<form method="post" action="insert.php">
+<form method="post" action="insert.php" enctype="multipart/form-data">
     <div class="row">
 
         <div class="col-12 col-lg-6 offset-lg-3 p-3">
@@ -102,7 +109,7 @@ if (!empty($_POST["data"])){
         <div class="col-12 col-lg-6 offset-lg-3 p-3">
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodPages">Antal sider:</label>
-                <input class="form-control bg-boxColor border border-3 border-white" type="text" name="data[prodPages]" id="prodPages" placeholder="Sider" value="">
+                <input class="form-control bg-boxColor border border-3 border-white" type="number" name="data[prodPages]" id="prodPages" placeholder="Sider" value="">
             </div>
         </div>
 
@@ -110,6 +117,13 @@ if (!empty($_POST["data"])){
             <div class="form-control bg-boxColor">
                 <label class="py-1 text-primary" for="prodPrice">Pris:</label>
                 <input class="form-control bg-boxColor border border-3 border-white" type="number" step="0.01" name="data[prodPrice]" id="prodPrice" placeholder="Pris" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 offset-lg-3 p-3">
+            <div class="form-control bg-boxColor">
+                <label class="py-1 text-primary" for="prodBillede">Produkt billede:</label>
+                <input class="form-control bg-boxColor border border-3 border-white" type="file" name="prodBillede" id="prodBillede">
             </div>
         </div>
 
