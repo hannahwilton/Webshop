@@ -1,7 +1,7 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM produkter WHERE prodId = 2");
+$produkter = $db->sql("SELECT * FROM produkter WHERE prodId = 46");
 
 ?>
 
