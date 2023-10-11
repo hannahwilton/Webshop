@@ -13,14 +13,20 @@ if (isset($data["password"]) && $data["password"] == "KickPHP"){
     $bind = [];
 
     if (!empty($data["nameSearch"])){
-        $sql .= " AND prodTitel = :prodTitel";
+        $sql .= " AND prodTitel LIKE CONCAT('%', :prodTitel, '%')";
         $bind[":prodTitel"] = $data["nameSearch"];
 
     }
 
     if (!empty($data["priceSearch"])){
-        $sql .= " AND prodPrice = :prodPrice";
+        $sql .= " AND prodPrice LIKE CONCAT('%', :prodPrice, '%')";
         $bind[":prodPrice"] = $data["priceSearch"];
+
+    }
+
+    if (!empty($data["authorSearch"])){
+        $sql .= " AND prodAuthor LIKE CONCAT ('%', :prodAuthor, '%')";
+        $bind[":prodAuthor"] = $data["authorSearch"];
 
     }
 

@@ -1,7 +1,8 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM produkter WHERE prodId = 46");
+
+$produkter = $db->sql("SELECT * FROM produkter WHERE prodId = " . $_GET['prodId']);
 
 ?>
 
@@ -10,7 +11,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId = 46");
 <head>
     <meta charset="utf-8">
 
-    <title>Produkt</title>
+    <title>Detaljeside</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -18,6 +19,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId = 46");
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +29,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId = 46");
 </head>
 
 <body>
+<?php include "includes/nav.php";?>
 
 <?php
 foreach ($produkter as $produkt)
