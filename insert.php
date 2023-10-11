@@ -36,6 +36,7 @@ if (!empty($_POST["data"])){
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/ddc56212a6.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,12 +49,15 @@ if (!empty($_POST["data"])){
 </head>
 
 <body>
+
+<?php include "includes/nav.php";?>
+
 <div class="container">
 <form method="post" action="insert.php" enctype="multipart/form-data">
     <div class="row">
 
         <div class="col-12 col-lg-6 offset-lg-3 p-3">
-            <h2 class="text-primary">Indsæt ny bog</h2>
+            <h2 class="text-primary my-2">Indsæt ny bog</h2>
         </div>
 
         <div class="col-12 col-lg-6 offset-lg-3 p-3">

@@ -21,6 +21,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "bootstrapComponents";
 
+
+$tablet: "screen and (max-width: 768px)";
+
+$laptop: "screen and (max-width: 992px)";
+
 * {
 	box-sizing: border-box;
 }
@@ -85,7 +90,42 @@ img {
 	border: solid white 3px;
 
 }
+.products .items .card-img-top{
+	height: 200px;
+	object-fit: cover;
+}
+
+.nav{
+	font-family: 'Mooli', sans-serif;
+}
+
+.fixed-height{
+	height: 200px;
+}
+
+.btn-bottom{
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.card-body{
+	position: relative;
+}
 
 
 
+.icon-container .navbar-nav{
+	display: flex;
+	gap: 2px;
 
+	@media #{$tablet} {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.icon-container .nav-item{
+	margin-right: 5px;
+}
