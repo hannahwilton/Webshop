@@ -62,8 +62,9 @@ foreach ($produkter as $produkt)
                         <h4 class="fw-bold">Pris: <?php echo number_format($produkt->prodPrice, 2, ",", "."); ?></h4>
                     </div>
 
-                    <div class="col-6 col-md-4 d-grid">
+                    <div class="col-6 col-md-4 flex align-items-center">
                         <button class="text-center px-3 btn btn-button text-white fw-bold">Køb</button>
+                        <a class="link-dark" href="#"><i class="fa-regular fa-heart ms-2"></i></a>
                     </div>
 
                     <div class="col-12">
@@ -97,7 +98,7 @@ foreach ($produkter as $produkt)
 
 </div>
 
-
+<?php include "includes/footer.php";?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

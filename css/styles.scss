@@ -77,7 +77,6 @@ img {
 	align-items: center;
 	min-height: 100vh;
 }
-
 .messageBox {
 	border-radius: 5px;
 }
@@ -128,4 +127,10 @@ img {
 
 .icon-container .nav-item{
 	margin-right: 5px;
+}
+
+.nav-item.active {
+	background-color: #007bff; /* Skift baggrundsfarven til det ønskede farve */
+	color: #fff; /* Ændre tekstfarven til hvid eller en farve, der passer til din stil */
+	/* Andre stilregler efter behov */
 }

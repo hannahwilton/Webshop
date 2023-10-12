@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Oversigt</a>
+                    <a class="nav-link" aria-current="page" href="index.php">Oversigt</a>
                 </li>
 
                 <li class="nav-item">
@@ -32,3 +32,6 @@
         </div>
     </div>
 </nav>
+
+
+
